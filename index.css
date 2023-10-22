@@ -1,0 +1,187 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+body {
+    font-size: 18px; 
+    font-weight: 400;
+    background: whitesmoke;
+}
+
+a {
+    text-decoration: none;
+    display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    width: 1375px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.header {
+    background-image: url(./images/foto_cook.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 815px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    height: 48px;
+    padding: 24px 32px;
+    gap: 8px;
+    border-radius: 72px;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    background: rgba(255, 255, 255, 0.30);
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.nav-list__item {
+    margin-right: 40px;
+    text-align: right;
+    font-family: 'Inter', Arial sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0.14px;
+    position: relative;
+}
+
+.link {
+        border-radius: 20px;
+}
+
+.nav-list__item:last-child {
+    margin-right: 0px;
+}
+
+.nav-list__item .link {
+    padding: 5px 20px;
+    color: #FFF;
+}
+
+.nav-list li:nth-child(5) .link {
+    margin-right: 0px;
+    border-radius: 82px;
+    background: #FFF;
+    color: #000;
+    padding: 8px 12px;
+}
+
+.nav-list__item:hover > .link {
+    background: rgba(255, 255, 255, 0.16);
+    transition: 200ms;
+}
+
+.nav-list__item:hover .nav-submenu-wrap {
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+    transform: scale(1);
+}
+
+.nav-submenu-wrap {
+    position: absolute;
+    /* display: none; */
+    transform: scale(0);
+    transform-origin: left top;
+    visibility: hidden;
+    opacity: 0;
+    transition: 200ms;
+    min-width: 200px;
+    padding: 8px;
+    min-height: 164px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.05), 0px 25px 37px 0px rgba(0, 0, 0, 0.10);
+}
+
+.nav-list .nav-list__item:nth-child(1) .link::after {
+    content: url(./images/Frame\ 1\ —\ копия.png);
+    margin-left: 8px;
+    width: 7px;
+    height: 3px;
+    font-weight: 700;
+}
+
+
+.nav-submenu-list, .nav_2 {
+    background: var(--White, #FFF);
+    border-radius: 10px;
+    padding: 10px 10px;
+    color: black;
+    text-align: left;
+}
+
+.nav_2 {
+    min-width: 225px;
+    box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.05), 0px 25px 37px 0px rgba(0, 0, 0, 0.10);
+}
+
+.link-submenu:hover {
+    background: rgba(0, 0, 0, 0.10);
+    transition: 200ms;
+}
+
+
+.link-submenu, .link-submenu_2 {
+    color: #374151;
+    padding: 10px 100px 10px 20px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.link-submenu_2:hover {
+    background: rgba(0, 0, 0, 0.10);
+    transition: 200ms;
+}
+
+.nav-submenu-wrap .link-submenu::before {
+    content: url(./images/tw-lightning-bolt\ —\ копия.png);
+    margin-right: 12px;
+}
+
+.nav-submenu-wrap li:nth-child(2) .link-arrow::after {
+    content: url(./images/caret\ —\ копия.png);
+    margin-left: 100%;
+}
+
+.nav-submenu-wrap .submenu_visibility:hover .nav-submenu-wrap_2 {
+    /* display: block; */
+    visibility: visible;
+    transform: translate(67%, -37%) scale(1);
+    opacity: 1;
+}
+
+.nav-submenu-wrap_2 {
+    position: absolute;
+    padding-left: 40px;
+    /* display: none; */
+    visibility: hidden;
+    transform: translate(67%, -37%) scale(0);
+    transform-origin: left top;
+    transition: 200ms;
+    opacity: 0;
+    min-width: 225px;
+    min-height: 164px;
+}
